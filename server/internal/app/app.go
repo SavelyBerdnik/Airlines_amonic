@@ -2,7 +2,8 @@ package app
 
 import (
 	"fmt"
-	"github.com/bouhartsev/amonic_airlines/server/internal/infrastructure/config"
+
+	"github.com/SavelyBerdnik/Airlines_amonic/server/internal/infrastructure/config"
 	"github.com/ilyakaznacheev/cleanenv"
 	"go.uber.org/zap"
 )

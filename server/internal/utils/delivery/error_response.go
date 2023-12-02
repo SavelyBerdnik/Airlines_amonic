@@ -2,9 +2,10 @@ package delivery
 
 import (
 	"errors"
-	"github.com/bouhartsev/amonic_airlines/server/internal/domain/errdomain"
-	"github.com/gin-gonic/gin"
 	"net/http"
+
+	"github.com/SavelyBerdnik/Airlines_amonic/server/internal/domain/errdomain"
+	"github.com/gin-gonic/gin"
 )
 
 func ErrorResponse(c *gin.Context, err error) {

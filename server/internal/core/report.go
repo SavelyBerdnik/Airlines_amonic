@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/bouhartsev/amonic_airlines/server/internal/domain"
+	"github.com/SavelyBerdnik/Airlines_amonic/server/internal/domain"
 )
 
 func (c *Core) GetDetailedReport(ctx context.Context) (*domain.GetDetailedReportResponse, error) {
@@ -67,7 +67,7 @@ func (c *Core) GetDetailedReport(ctx context.Context) (*domain.GetDetailedReport
 	resp.TopCustomers.Third = topCustomers[2]
 
 	// number of passengers flying busiest day
-	row = c.db.QueryRowContext(ctx, fmt.Sprintf(`select max(tab.total) as max, DATE_FORMAT(tab.Date, '%Y-%m-%d')
+	row = c.db.QueryRowContext(ctx, fmt.Sprintf(`select max(tab.total) as max, DATE_FORMAT(tab.Date, %s)
                                                         from(select count(*) as total, s.Date
                                                              from tickets t
                                                              join schedules s on t.ScheduleID = s.ID
@@ -75,7 +75,7 @@ func (c *Core) GetDetailedReport(ctx context.Context) (*domain.GetDetailedReport
                                                              group by t.ScheduleID) tab
                                                         group by tab.Date
                                                         order by max desc
-                                                        limit 1`, day))
+                                                        limit 1`, "'%Y-%m-%d'", day))
 
 	if err := row.Scan(
 		&resp.NumberOfPassengersFlying.BusiestDay.FlyingNumber,
@@ -86,7 +86,7 @@ func (c *Core) GetDetailedReport(ctx context.Context) (*domain.GetDetailedReport
 	}
 
 	// number of passengers flying most quiet day
-	row = c.db.QueryRowContext(ctx, fmt.Sprintf(`select min(tab.total) as min, DATE_FORMAT(tab.Date, '%Y-%m-%d')
+	row = c.db.QueryRowContext(ctx, fmt.Sprintf(`select min(tab.total) as min, DATE_FORMAT(tab.Date, %s)
                                                         from(select count(*) as total, s.Date
                                                              from tickets t
                                                              join schedules s on t.ScheduleID = s.ID
@@ -94,7 +94,7 @@ func (c *Core) GetDetailedReport(ctx context.Context) (*domain.GetDetailedReport
                                                              group by t.ScheduleID) tab
                                                         group by tab.Date
                                                         order by min
-                                                        limit 1;`, day))
+                                                        limit 1;`, "'%Y-%m-%d'", day))
 
 	if err := row.Scan(
 		&resp.NumberOfPassengersFlying.MostQuietDay.FlyingNumber,

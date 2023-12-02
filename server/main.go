@@ -4,7 +4,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/bouhartsev/amonic_airlines/server/internal/app"
+	"github.com/SavelyBerdnik/Airlines_amonic/server/internal/app"
 )
 
 // @title           Amonic Airlines API Documentation

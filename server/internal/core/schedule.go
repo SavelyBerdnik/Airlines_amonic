@@ -12,8 +12,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/bouhartsev/amonic_airlines/server/internal/domain"
-	"github.com/bouhartsev/amonic_airlines/server/internal/domain/errdomain"
+	"github.com/SavelyBerdnik/Airlines_amonic/server/internal/domain"
+	"github.com/SavelyBerdnik/Airlines_amonic/server/internal/domain/errdomain"
 )
 
 func (c *Core) GetSchedules(ctx context.Context, request *domain.GetSchedulesRequest) (*domain.GetSchedulesResponse, error) {
@@ -192,6 +192,7 @@ func (c *Core) UpdateSchedulesFromFile(ctx context.Context, file multipart.File)
 	)
 	wg.Add(len(actions))
 	for _, a := range actions {
+		a := a
 		go func(action *domain.ScheduleAction) {
 			defer wg.Done()
 

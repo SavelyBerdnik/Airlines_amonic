@@ -3,7 +3,7 @@ package core
 import (
 	"context"
 
-	"github.com/bouhartsev/amonic_airlines/server/internal/domain"
+	"github.com/SavelyBerdnik/Airlines_amonic/server/internal/domain"
 )
 
 func (c *Core) GetAirports(ctx context.Context) (*domain.GetAirportsResponse, error) {

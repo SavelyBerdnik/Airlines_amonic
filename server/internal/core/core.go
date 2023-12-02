@@ -5,7 +5,7 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/bouhartsev/amonic_airlines/server/internal/infrastructure/config"
+	"github.com/SavelyBerdnik/Airlines_amonic/server/internal/infrastructure/config"
 )
 
 type Core struct {

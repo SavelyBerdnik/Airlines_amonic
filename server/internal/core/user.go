@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/bouhartsev/amonic_airlines/server/internal/domain"
-	"github.com/bouhartsev/amonic_airlines/server/internal/domain/errdomain"
+	"github.com/SavelyBerdnik/Airlines_amonic/server/internal/domain"
+	"github.com/SavelyBerdnik/Airlines_amonic/server/internal/domain/errdomain"
 )
 
 func (c *Core) CreateUser(ctx context.Context, request *domain.CreateUserRequest) (*domain.User, error) {

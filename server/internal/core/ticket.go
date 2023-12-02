@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"strings"
 
-	"github.com/bouhartsev/amonic_airlines/server/internal/domain"
+	"github.com/SavelyBerdnik/Airlines_amonic/server/internal/domain"
 )
 
 var letters = []rune("ABCDEFGHIJKLMNOPQRSTUVWXYZ123456790")

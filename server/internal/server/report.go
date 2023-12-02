@@ -5,7 +5,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/bouhartsev/amonic_airlines/server/internal/utils/delivery"
+	"github.com/SavelyBerdnik/Airlines_amonic/server/internal/utils/delivery"
 )
 
 // GetDetailedReport godoc

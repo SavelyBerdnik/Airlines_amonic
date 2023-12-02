@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/bouhartsev/amonic_airlines/server/internal/domain"
+	"github.com/SavelyBerdnik/Airlines_amonic/server/internal/domain"
 )
 
 func (c *Core) GetAmenities(ctx context.Context) (*domain.GetAmenitiesResponse, error) {

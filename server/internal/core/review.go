@@ -6,7 +6,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/bouhartsev/amonic_airlines/server/internal/domain"
+	"github.com/SavelyBerdnik/Airlines_amonic/server/internal/domain"
 )
 
 func (c *Core) AddReview(ctx context.Context, request *domain.AddReviewRequest) error {

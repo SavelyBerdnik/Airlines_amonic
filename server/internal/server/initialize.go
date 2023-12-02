@@ -8,7 +8,7 @@ import (
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 
-	_ "github.com/bouhartsev/amonic_airlines/server/docs"
+	_ "github.com/SavelyBerdnik/Airlines_amonic/server/docs"
 )
 
 func (s *Server) initRoutes() *gin.Engine {

@@ -3,8 +3,8 @@ package core
 import (
 	"context"
 
-	"github.com/bouhartsev/amonic_airlines/server/internal/domain"
-	"github.com/bouhartsev/amonic_airlines/server/internal/domain/errdomain"
+	"github.com/SavelyBerdnik/Airlines_amonic/server/internal/domain"
+	"github.com/SavelyBerdnik/Airlines_amonic/server/internal/domain/errdomain"
 )
 
 func (c *Core) GetOffices(ctx context.Context) (*domain.GetOfficesResponse, error) {

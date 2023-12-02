@@ -1,6 +1,6 @@
 package app
 
-import "github.com/bouhartsev/amonic_airlines/server/internal/server"
+import "github.com/SavelyBerdnik/Airlines_amonic/server/internal/server"
 
 func (a *application) Run() error {
 	s, err := server.New(a.logger, a.cfg)
